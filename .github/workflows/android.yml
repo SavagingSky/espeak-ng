@@ -43,6 +43,7 @@ jobs:
         run: cd android && ./gradlew assembleRelease --no-daemon
       - name: Sign APK
         uses: r0adkll/sign-android-release@v1
+        id: sign_app
         with:
           releaseDirectory: android/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.signing_key }}
