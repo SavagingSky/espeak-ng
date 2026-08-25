@@ -49,6 +49,8 @@ jobs:
           alias: ${{ secrets.alias }}
           keyStorePassword: ${{ secrets.key_store_password }}
           keyPassword: ${{ secrets.key_store_password }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0"
       - name: upload
         uses: actions/upload-artifact@v7
         with:
